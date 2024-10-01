@@ -1,7 +1,13 @@
+$primary-color: #f44336;
+$text-small: 12px;
+$text-medium: 30px;
+$text-large: 46px;
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  font-size: $text-large;
   display: flex;
   justify-content: center;
   align-items: center;
