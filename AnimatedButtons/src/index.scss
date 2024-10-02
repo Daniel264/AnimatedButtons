@@ -1,7 +1,11 @@
 $primary-color: #f44336;
+$default-color: #fff;
 $text-small: 12px;
 $text-medium: 30px;
 $text-large: 46px;
+$rounded-sm: 5px;
+$rounded-md: 20px;
+$rounded-lg: 35px;
 
 body {
   font-family: "Roboto", sans-serif;
@@ -13,4 +17,16 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f5f5f5;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background-color: $primary-color;
+  border-radius: $rounded-md;
+  font-size: $text-medium;
+  color: $default-color;
+  cursor: pointer;
+  transition: all 0.3s;
 }

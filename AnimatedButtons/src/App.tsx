@@ -1,15 +1,12 @@
-
-import './index.scss'
+import Button from "./components/Button";
+import "./index.scss";
 
 function App() {
- 
-
   return (
     <>
-      hello world
-      
+      <Button />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
