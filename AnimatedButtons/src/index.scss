@@ -8,25 +8,32 @@ $rounded-md: 20px;
 $rounded-lg: 35px;
 
 body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  font-size: $text-large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: $text-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
 }
 
 .btn {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  background-color: $primary-color;
-  border-radius: $rounded-md;
-  font-size: $text-medium;
-  color: $default-color;
-  cursor: pointer;
-  transition: all 0.3s;
+    padding: 16px 30px;
+    border: 2px solid black; // Add border to make the background slide effect more visible
+    cursor: pointer;
+    color: $default-color;
+    font-size: $text-medium;
+    border-radius: $rounded-sm;
+    outline: none;
 }
+
+// @keyframes button {
+//     0% {
+//         /* CSS properties */
+//     }
+//     100% {
+//         /* CSS properties */
+//     }
+// }
