@@ -1,11 +1,11 @@
-import React from "react";
+import gsap from "gsap";
 
 const Button = () => {
-  return (
-    <div>
-      <button className="btn">Click Me</button>
-    </div>
-  );
+    return (
+        <div>
+            <button className="btn">Click Me</button>
+        </div>
+    );
 };
 
 export default Button;
