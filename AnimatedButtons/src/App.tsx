@@ -1,10 +1,10 @@
-import Button from "./components/Button";
+import { Button } from "./components/Button";
 import "./index.scss";
 
 function App() {
     return (
         <>
-            <Button />
+            <Button backgroundColor={"bg-blue"} color={"black"} />
         </>
     );
 }

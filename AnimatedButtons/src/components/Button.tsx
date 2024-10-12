@@ -1,60 +1,15 @@
-import gsap from "gsap";
-import { useEffect } from "react";
+interface ButtonProps {
+    backgroundColor: string;
+    color: string;
+}
 
-const Button = () => {
-    useEffect(() => {
-        const button = document.querySelector(".btn");
-
-        if (button) {
-            // Set the initial background (white)
-            gsap.set(button, {
-                background: "white",
-                color: "black"
-            });
-
-            // On hover (mouseenter), animate the background to slide from left to right
-            button.addEventListener("mouseenter", () => {
-                gsap.to(button, {
-                    background: "linear-gradient(to right, blue 100%, white 0%)", // Create gradient effect
-                    backgroundSize: "200% 100%",
-                    backgroundPosition: "0% 0", // Reveal blue color from left
-                    duration: 0.5,
-                    ease: "power2.inOut",
-                });
-            });
-
-            // On hover out (mouseleave), reverse the background back to white
-            button.addEventListener("mouseleave", () => {
-                gsap.to(button, {
-                    backgroundPosition: "100% 0", // Slide back to white
-                    duration: 0.5,
-                    ease: "power2.inOut",
-                    onComplete: () => {
-                        gsap.set(button, {
-                            background: "white",
-                            color: "black"
-                        });
-                    }
-       
-                });
-            });
-        }
-
-        return () => {
-            button?.removeEventListener("mouseenter", () => {});
-            button?.removeEventListener("mouseleave", () => {});
-        };
-    }, []);
-
+export const Button = ({ backgroundColor, color }: ButtonProps) => {
     return (
-        <div>
-            <button className="btn" >
-                Hover Me
-            </button>
-        </div>
+        <button
+            className={`btn-shadow group relative flex h-[45px] w-fit items-center justify-center overflow-hidden rounded-xl px-3 ${backgroundColor} text-sm ${color} rounded-xl font-normal  leading-[24px]   transition-all md:h-[48px] xl:w-[154px] xl:text-[14px]`}
+        >
+            <div className="absolute -bottom-[2px] -left-1 right-0 z-10 !mx-auto h-[0px] w-[160px] rounded-xl bg-white transition-all duration-300 group-hover:h-[52px]" />
+            <span className="z-[11] group-hover:text-black">Hover me</span>
+        </button>
     );
 };
-
-
-
-export default Button;

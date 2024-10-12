@@ -19,7 +19,7 @@ body {
     background-color: #f5f5f5;
 }
 
-.btn {
+button {
     padding: 16px 30px;
     border: 2px solid black; // Add border to make the background slide effect more visible
     cursor: pointer;
@@ -27,13 +27,56 @@ body {
     font-size: $text-medium;
     border-radius: $rounded-sm;
     outline: none;
+
+    //
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    height: 45px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 0 10px;
+    background-color: $primary-color;
+    font-size: small;
+    color: $default-color;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    
+    @media screen and (min-width: 768px) {
+        height: 48px;
+
+        
+    }
+    @media screen and (min-width: 1024){
+        width: 154px;
+        font-size: $text-medium;
+    }
+
+    div {
+        position: absolute;
+        bottom: -2px;
+        left: -1rem;
+        right: 0px;
+        z-index: 10;
+        margin: 0 auto;
+        height: 0px;
+        width: 160px;
+        border-radius: $rounded-lg;
+        background: #fff;
+        transition: all 3s ease;
+        
+        &:hover {
+            height: 52px;
+        }
+        span {
+            z-index: 11;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
 }
 
-// @keyframes button {
-//     0% {
-//         /* CSS properties */
-//     }
-//     100% {
-//         /* CSS properties */
-//     }
-// }
