@@ -4,7 +4,7 @@ import "./index.scss";
 function App() {
     return (
         <>
-            <Button backgroundColor={"bg-blue"} color={"black"} />
+            <Button />
         </>
     );
 }
